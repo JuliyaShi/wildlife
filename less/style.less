@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+
+
+.roboto () {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    color: @font-light;
+}
+
+.opensans () {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: @font-light;
+}
+
+@color-orange: #CD6326;
+@color-orange-light: #E39128;
+@color-orange-dark: #8F5613;
+@font-dark: #333333;
+@bg-header-survival: #02160b;
+@bg-latest-notified: #cccccc;
+@bg-footer: #181617;
+@font-light: #f7f7f7;
+@font-grey: #666666;
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    .opensans();
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: 2px;
+    color: @color-orange;
+}
+
+
+h2,
+h3 {
+    color: @font-dark;
+}
+
+sh-2 {
+    color: @font-grey;
+}
+
+h4 {
+    color: @font-light;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+p {
+    .opensans();
+    color: @font-light;
+}
+
+.padding-top {
+    padding-top: 17px;
+
+}
+
+a {
+    text-decoration: none;
+    .opensans ();
+}
+
+.bg {
+    &-1 {
+        background-color: @bg-header-survival;
+    }
+
+    &-2 {
+        background-color: @bg-latest-notified;
+
+    }
+
+    &-3 {
+        background-color: @bg-footer;
+    }
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section-first {
+    height: 779px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1440px;
+    background: @bg-header-survival url(../img/bg-fox.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+.bg-none {
+    background: none;
+}
+
+.navbar {
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        padding-top: 3px;
+    }
+
+    &-brand__text {
+        .roboto();
+        text-transform: uppercase;
+        margin-top: 3px;
+        font-size: 32px;
+    }
+
+    &-brand__text:before {
+
+        content: url('../img/logo.svg');
+        padding-right: 15px;
+        vertical-align: middle;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        width: 481px;
+
+        a {
+            justify-content: space-between;
+            font-size: 23px;
+            line-height: 27px;
+        }
+    }
+}
+
+.nav-item:not(:nth-of-type(4)) {
+    &:hover {
+        opacity: 0.7;
+
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.survival {
+    padding-top: 117px;
+
+    &-text {
+        padding-top: 51px;
+        padding-bottom: 47px;
+        max-width: 274px;
+    }
+
+    &-block {
+        // padding-top: 32px;
+    }
+}
+
+.btn {
+    .roboto();
+    text-align: center;
+    padding: 8px 23px;
+    border: 2px solid @color-orange;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: @color-orange;
+        border: 2px solid @color-orange;
+    }
+
+    &:active {
+        background: @color-orange-dark;
+        border: 2px solid @color-orange-dark;
+    }
+
+}
+
+.button {
+    .roboto();
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    text-align: center;
+    padding: 16px 42px 17px 42px;
+    color: @font-light;
+    background: @color-orange;
+    border: 1px solid @color-orange;
+    border-radius: 5px;
+
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: @color-orange-light;
+        border: 1px solid @color-orange-light;
+    }
+
+    &:active {
+        background: @color-orange-dark;
+        border: 1px solid @color-orange-dark;
+    }
+}
+
+.section-two {
+    width: 100%;
+    padding-top: 121px;
+    text-align: center;
+    height: 1368px;
+
+}
+
+.latest-articles {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    .opensans();
+    margin: 0;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+}
+
+.subtitle {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 36px;
+
+}
+
+// / *SLIDER*  
+
+.slider {
+
+    width: 1080px;
+    height: 360px;
+    margin: 0 px auto;
+    overflow: hidden;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 120px;
+    }
+
+    img {
+        padding: 0 30px;
+    }
+
+    &-line {
+        height: 360px;
+        width: 2160px;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all ease 1s;
+    }
+
+    &-btn {
+
+        margin-top: 5px;
+
+        &:hover {
+            opacity: 0.6;
+
+        }
+
+        &:active {
+            opacity: 0.2;
+        }
+    }
+
+    &-prev {
+        background: url('../img/arrow-left.svg') no-repeat center;
+        height: 70px;
+        width: 30px;
+
+    }
+
+    &-next {
+        background: url('../img/arrow-right.svg') no-repeat center;
+        height: 70px;
+        width: 30px;
+
+    }
+}
+
+.get-notified {
+    padding-top: 239px;
+
+    h3 {
+        .opensans();
+        font-size: 27px;
+        line-height: 40px;
+        text-align: center;
+        padding-bottom: 61px;
+    }
+
+}
+
+form {
+    display: flex;
+    width: 660px;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+input {
+    width: 540px;
+    border: 1px solid @font-grey;
+    height: 60px;
+    background: transparent;
+
+
+    &::placeholder {
+        .roboto();
+        padding-left: 15px;
+        color: @font-grey;
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+    }
+
+    &:nth-of-type(2) {
+
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+input[type="email"] {
+    padding: 5px 0px;
+
+}
+
+.input {
+
+    &-button {
+        .roboto();
+        outline: none;
+        width: 120px;
+        color: @font-light;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: @color-orange;
+        border: 1px solid @color-orange;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background: @color-orange-light;
+            border: 1px solid @color-orange-light;
+        }
+
+        &:active {
+            background: @color-orange-dark;
+            border: 1px solid @color-orange-dark;
+        }
+    }
+
+
+
+}
+
+
+.footer {
+    background-color: #181617;
+}
